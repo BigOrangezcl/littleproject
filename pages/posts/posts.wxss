@@ -1,0 +1,9 @@
+.swip{
+  width: 100%;
+  height: 600rpx;
+}
+/* less sass */
+.swip image{
+  width: 100%;
+  height: 600rpx;
+}

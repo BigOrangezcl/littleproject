@@ -1,0 +1,7 @@
+<view>
+<swiper class="swip" indicator-dots="true" autoplay="true" interval="3000">
+   <swiper-item><image      src="/images/l1.jpg"></image></swiper-item>
+   <swiper-item><image src="/images/l2.jpg"></image></swiper-item>
+   <swiper-item><image src="/images/l3.jpg"></image></swiper-item>
+</swiper>
+</view>
