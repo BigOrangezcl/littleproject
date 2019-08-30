@@ -1,7 +1,38 @@
+<import src="/pages/posts/post-item/post-item-template.wxml" />
 <view>
-<swiper class="swip" indicator-dots="true" autoplay="true" interval="3000">
-   <swiper-item><image      src="/images/l1.jpg"></image></swiper-item>
-   <swiper-item><image src="/images/l2.jpg"></image></swiper-item>
-   <swiper-item><image src="/images/l3.jpg"></image></swiper-item>
-</swiper>
+  <swiper vertical="{{false}}" class="swip" indicator-dots="true" autoplay="true" interval="3000">
+    <swiper-item>
+      <image src="/images/pic1.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/pic2.jpg"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="/images/pic6.jpg"></image>
+    </swiper-item>
+  </swiper>
+
+  <!-- first  wx:for-index="idx"  {{idx}}-->
+  <block wx:for="{{posts_key}}" wx:for-item="item">
+    <template is="postItem" data="{{item}}"/>
+  </block>
+
+
+
+  <!-- second -->
+  <view class="post-container">
+    <view class="post-author-date">
+      <image class="post-author" src="/images/avatar/1.png"></image>
+      <text class="post-date">Aug 10 2019</text>
+    </view>
+    <text class="post-title">古城流水人家</text>
+    <image class="post-image" src="/images/pic6.jpg"></image>
+    <text class="post-content">古城的屋子旁好像都会有一条小水沟呢，在繁杂的街道有一条小溪自顾自地流着，可谓一股清流呢！</text>
+    <view class="post-like">
+      <image class="post-like-image" src="../../images/icon/chat.png"></image>
+      <text class="post-like-font">321</text>
+      <image class="post-like-image" src="../../images/icon/view.png"></image>
+      <text class="post-like-font">650</text>
+    </view>
+  </view>
 </view>
